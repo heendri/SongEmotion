@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Prediksi</title>
+	</head>
+	<body style="background-image: url('/static/bg2.jpg')">
+		<h1 align="center">Song Mood Detection</h1>
+		<p align="center">Masukan penggalan lirik pada teks dibawah ini</p>
+		<form action = "http://localhost:5000/uploader" 
+			method = "POST" align="center">
+         <table align="center"><td>
+            <textarea cols="50" rows="10" name = "lirik"></textarea> </td></tr>
+         </table>
+         <input type = "submit"/>
+      </form>
+      {% if hasil == "[1]" %}
+      	<p align="center"><img src="{{url_for('static', filename='joy.png')}}" width="250"/></p>
+      {% endif %}
+      {% if hasil == "[2]" %}
+      	<p align="center"><img src="{{url_for('static', filename='sad.png')}}" width="250"/></p>
+      {% endif %}
+	</body>
+</html>
